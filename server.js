@@ -10,8 +10,12 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static('./public'));
 
 app.get('/hello', (req, res) => {
-  res.render('index.ejs');
+  res.render('pages/index.ejs');
 })
+
+app.get('/searches', (req, res) => {
+    res.render('pages/searches/new.ejs');
+  })
 
 
 app.set('view engine', 'ejs');
