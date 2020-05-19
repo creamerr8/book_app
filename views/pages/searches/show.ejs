@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show</title>
+</head>
+<body>
+  <h1>Search Results</h1>
+  <ul>
+    <% newBooks.forEach(val => { %>
+      <li>
+        <h2> <%= val.title%></h2>
+        <h2> <%= val.author%></h2>
+        <h2> <%= val.description%></h2>
+        <img src=<%= val.img %> alt=<% val.description%>>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
