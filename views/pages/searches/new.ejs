@@ -6,12 +6,14 @@
   <title>Searches</title>
 </head>
 <body>
-  <form action="/new" method="POST">
+  <form action="/searches" method="POST">
     <fieldset>
+      <input type="text" name="search" placeholder="Enter Title/Author">
       <label for="title">Search By Title</label>
-      <input type="text" name="title">
+      <input type="radio" name="title">
       <label for="author">Search By Author</label>
-      <input type="text" name="author">
+      <input type="radio" name="author">
+      <input type="submit">
     </fieldset>
   </form>
 </body>
