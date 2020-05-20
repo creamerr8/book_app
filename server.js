@@ -25,21 +25,22 @@ app.set('view engine', 'ejs');
 
 
 // routes
-app.get('/', index)
+app.get('/', index);
 
 app.get('/searches/new', (req, res) => {
-  res.render('pages/searches/new')
+  res.render('pages/searches/new');
 });
-app.post('/searches', getBooks)
+app.post('/searches', getBooks);
 
+app.post('/books', saveBooks);
 
 
 // functionality
 function index(req, res){
 
-  // check data basse if there are any books
-  // logic check: if nothing in data base send to search for new book
-  // if is something send from database
+  //DONE: check data basse if there are any books
+  // DONE: logic check: if nothing in data base send to search for new book
+  //TODO: if is something send from database
 
   client.query('SELECT * FROM books;')
     .then(resultSQL => {
@@ -65,6 +66,9 @@ function getBooks(req, res){
   });
 }
 
+function saveBooks(req, res){
+  
+}
 
 
 // constructors
