@@ -8,24 +8,20 @@
 <body>
   <h1>Search Results</h1>
   <ul>
-    <% newBooks.forEach(val => { %>
+    <% newBooks.forEach(book => { %>
       <li>
-        <h2> <%= val.title%></h2>
-        <h2> <%= val.author%></h2>
-        <h2> <%= val.description%></h2>
-        <img src=<%= val.image %> alt=<% val.description%>>
+        <img src="<%= book.img %>">
+        <h2> <%= book.title%></h2>
+        <h2> <%= book.author%></h2>
+        <h2> <%= book.description%></h2>
       </li>
   <form action="/books" method="POST">
     <fieldset>
-      <label for="title"> Save Title</label>
-      <input type="text" name="title" value=" <%=val.title %>">
-      <label for="author">Save Author</label>
-      <input type="text" name="author" value=" <%=val.author %>">
-      <label for="image">Save Image</label>
-      <input type="text" name="image" value=" <%=val.image %>">
-      <label for="description">Save Description</label>
-      <input type="text" name="description" value=" <%=val.description %>">
-      <input type="submit" value="submit">
+      <input type="hidden" name="title" value=" <%=book.title %>">
+      <input type="hidden" name="author" value=" <%=book.author %>">
+      <input type="hidden" name="image" value=" <%=book.img %>">
+      <input type="hidden" name="description" value=" <%=book.description %>">
+      <input type="submit" value="save">
     </fieldset>
   </form>
     <% }) %>
