@@ -8,13 +8,8 @@
 <body>
   <h1>Saved Book</h1>
     <ul>
-      <li>
-        <img src="<%= book.image %>">
-        <h2> <%= book.title%></h2>
-        <h2> <%= book.author%></h2>
-        <h2> <%= book.description%></h2>
-        <p><%= book.isbn%></p>
-      </li>
+      <img src="<%= book.image_url %>">
+      <%- include('../layout/details', {'book': book, displayLink: false}) %>
     </ul>
 </body>
 </html>
