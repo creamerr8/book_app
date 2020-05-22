@@ -1,0 +1,14 @@
+<form action="/book/:id/update" method="POST">
+  <fieldset>
+    <label for="title">Title</label>
+    <input type="radio" name="title" value="<%= book.title %>">
+    <label for="author">Author</label>
+    <input type="radio" name="author" value="<%= book.author %>">
+    <label for="description">Description</label>
+    <input type="radio" name="description" value="<%= book.description %>">
+    <label for="isbn">ISBN</label>
+    <input type="radio" name="isbn" value="<%= book.isbn %>">
+    <label for="img">Image</label>
+    <input type="text" name="img" value="<%= book.image_url %>">
+  </fieldset>
+</form>

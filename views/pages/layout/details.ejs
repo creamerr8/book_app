@@ -1,0 +1,14 @@
+
+<li>
+  <h2> <%= book.title%></h2>
+  <h2> <%= book.author%></h2>
+  <h2> <%= book.description%></h2>
+  <p><%= book.isbn%></p>
+</li>
+
+<li>
+  <% if(displayLink) {%>
+    <a href="/books/<%= book.id%>">details</a>
+  <%}%>
+</li>
+

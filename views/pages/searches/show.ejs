@@ -9,12 +9,8 @@
   <h1>Search Results</h1>
   <ul>
     <% newBooks.forEach(book => { %>
-      <li>
         <img src="<%= book.img %>">
-        <h2> <%= book.title%></h2>
-        <h2> <%= book.author%></h2>
-        <h2> <%= book.description%></h2>
-      </li>
+          <%- include('../layout/details', {'book': book, displayLink: false}) %>
   <form action="/books" method="POST">
     <fieldset>
       <input type="hidden" name="title" value=" <%=book.title %>">
